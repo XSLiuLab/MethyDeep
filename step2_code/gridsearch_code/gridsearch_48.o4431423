@@ -1,0 +1,20 @@
+0.5934323668479919
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0, 'epochs': 100, 'first_layer_nodes': 40, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 4}
+0.8060985207557678
+{'activation_func': 'relu', 'batch_size': 50, 'dropout': 0.3, 'epochs': 100, 'first_layer_nodes': 100, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.8584831953048706
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.3, 'epochs': 100, 'first_layer_nodes': 150, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.8874120116233826
+{'activation_func': 'relu', 'batch_size': 50, 'dropout': 0.3, 'epochs': 100, 'first_layer_nodes': 170, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.9014855623245239
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.3, 'epochs': 100, 'first_layer_nodes': 250, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 5}
+0.909304141998291
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.3, 'epochs': 50, 'first_layer_nodes': 250, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.9147771596908569
+{'activation_func': 'relu', 'batch_size': 80, 'dropout': 0.3, 'epochs': 100, 'first_layer_nodes': 280, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.9202501773834229
+{'activation_func': 'relu', 'batch_size': 80, 'dropout': 0.3, 'epochs': 50, 'first_layer_nodes': 250, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 5}
+0.9233776330947876
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.5, 'epochs': 100, 'first_layer_nodes': 310, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 4}
+0.92494136095047
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.3, 'epochs': 50, 'first_layer_nodes': 280, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}

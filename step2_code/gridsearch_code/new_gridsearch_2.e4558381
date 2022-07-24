@@ -1,0 +1,120 @@
+2022-06-20 08:24:30.334206: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.334209: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.334217: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.334336: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.334940: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.334937: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.335104: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.335284: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.335399: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:24:30.335538: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-20 08:25:17.169318: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.169386: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.169431: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.169526: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.169528: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.169628: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.169904: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.169996: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.170060: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.170331: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.170507: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.170853: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.171168: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.171253: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.171308: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.171704: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.171772: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.171819: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.171852: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.171875: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.171890: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.171941: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.172741: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.172880: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.173850: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.173910: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.173948: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.174539: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.174923: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.174993: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.175024: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.175450: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.179424: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.179578: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.179694: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.181097: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.200869: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/gridview//pbs/dispatcher/lib::/usr/local/lib64:/usr/local/lib
+2022-06-20 08:25:17.200939: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-06-20 08:25:17.200979: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node33): /proc/driver/nvidia/version does not exist
+2022-06-20 08:25:17.201458: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-20 08:25:17.336975: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.337788: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.338330: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.339082: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.343768: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.344467: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.346782: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.347456: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.348780: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.349732: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.349744: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.351143: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.379092: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.379789: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.383746: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.384485: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.403823: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.404646: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+2022-06-20 08:25:17.406210: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-20 08:25:17.407210: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 3000000000 Hz
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_5.py", line 171, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_10.py", line 171, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_15.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_20.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_25.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_30.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_35.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/grid_3_40.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/gird_3_45.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64
+Traceback (most recent call last):
+  File "/public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_2/gird_3_50.py", line 149, in <module>
+    f.write(grid.best_score_) #将字符串写入文件中
+TypeError: write() argument must be str, not numpy.float64

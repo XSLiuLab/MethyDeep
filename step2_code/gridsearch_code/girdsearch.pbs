@@ -1,0 +1,36 @@
+#!/bin/sh
+      #PBS -N new_gridsearch_50
+      #PBS -k oe
+      #PBS -l walltime=1000:00:00,nodes=1:ppn=10
+      #PBS -q slst_fat
+
+
+   if [ -f "/public/home/liuxs/anaconda3/etc/profile.d/conda.sh" ]; then
+      . "/public/home/liuxs/anaconda3/etc/profile.d/conda.sh"
+  else
+        export PATH="/public/home/liuxs/anaconda3/bin:$PATH"
+  fi
+
+#conda activate  /public/slst/home/ningwei/anaconda3/envs/champ
+conda activate  /public/slst/home/ningwei/anaconda3/envs/DNN
+cd /public/slst/home/ningwei/TCGA/Methylation450K
+
+
+#R --vanilla </public/slst/home/ningwei/TCGA/Methylation450K/tpot/tpot.py
+  ##bedtools intersect -a drivergeneregion-8kb.tsv -b cll_mutations_1.tsv -wa -wb > drivergene-distribution.tsv
+  # for i in $(cat cg.txt)
+  # do 
+  # {
+  # zcat jhu-usc.edu_PANCAN_HumanMethylation450.betaValue_whitelisted.tsv.synapse_download_5096262.xena.gz | awk -v mod=$i '$1==mod{print $0}' > /public/slst/home/ningwei/TCGA/Methylation450K/700cg/$i.txt
+  # } &
+  # done
+  # wait
+#python /public/slst/home/ningwei/python/feature_6_14.py
+#python /public/slst/home/ningwei/python/gridseach.py
+for i in $(ls /public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_50)
+  do 
+  {
+  python /public/slst/home/ningwei/TCGA/Methylation450K/feature_importance_6_15/gridsearch_code/grid_50/$i
+  } &
+  done
+  wait

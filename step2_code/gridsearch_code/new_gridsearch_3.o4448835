@@ -1,0 +1,18 @@
+0.5634588599205017
+{'activation_func': 'relu', 'batch_size': 50, 'dropout': 0, 'epochs': 100, 'first_layer_nodes': 30, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 5}
+0.7364016771316528
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0, 'epochs': 100, 'first_layer_nodes': 100, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.8507670760154724
+{'activation_func': 'relu', 'batch_size': 80, 'dropout': 0.3, 'epochs': 50, 'first_layer_nodes': 150, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.8856346011161804
+{'activation_func': 'relu', 'batch_size': 50, 'dropout': 0.3, 'epochs': 100, 'first_layer_nodes': 130, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 4}
+0.9023709893226624
+{'activation_func': 'relu', 'batch_size': 50, 'dropout': 0.5, 'epochs': 50, 'first_layer_nodes': 200, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.913528561592102
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.5, 'epochs': 100, 'first_layer_nodes': 280, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 5}
+0.9274755716323853
+{'activation_func': 'relu', 'batch_size': 100, 'dropout': 0.3, 'epochs': 50, 'first_layer_nodes': 200, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 4}
+0.9330543875694275
+{'activation_func': 'sigmoid', 'batch_size': 80, 'dropout': 0, 'epochs': 50, 'first_layer_nodes': 340, 'last_layer_nodes': 25, 'loss_func': 'categorical_crossentropy', 'n_layers': 3}
+0.9525802135467529
+{'activation_func': 'relu', 'batch_size': 80, 'dropout': 0.5, 'epochs': 50, 'first_layer_nodes': 230, 'last_layer_nodes': 30, 'loss_func': 'categorical_crossentropy', 'n_layers': 4}
