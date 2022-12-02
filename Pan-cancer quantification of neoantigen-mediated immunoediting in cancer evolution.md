@@ -25,7 +25,7 @@ This repository provides the analysis reports, code and data for readers who are
 
 * [code](./code) 
   * [data_process](./code/data_process/) : Preprocessing of original data and generation of training data
-  * [Difference analysis](./code/Difference-analysis/) : Difference analysis between champ and wilcox test
+  * [Difference analysis](./code/Difference analysis/) :Difference analysis between champ and wilcox test
   * [ML](./code/ML/) : Comparison of six machine learning methods
   * [DNN_Gridsearch](./code/DNN_Gridsearch/) : Neural network for super parameter selection
   * [DNN](./code/DNN/) : Training of Neural Network
