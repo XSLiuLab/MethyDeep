@@ -1,4 +1,4 @@
-# Pan-cancer quantification of neoantigen-mediated immunoediting in cancer evolution
+# **Accurate prediction of pan-cancer types using machine learning with minimal number of DNA methylation sites**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![version](https://img.shields.io/badge/version-dev-green.svg)](https://shields.io/)
