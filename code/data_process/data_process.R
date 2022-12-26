@@ -70,7 +70,7 @@ write.csv(cancer_data,file=paste0("/public/slst/home/ningwei/methylation/data/al
 
 ########################## After completing the difference, generate training data
 library(stringr)
-all_cg<-read.csv("/public/slst/home/ningwei/methylation/process_data/all_cg.csv")
+all_cg<-read.csv("/public/slst/home/ningwei/methylation/process_data/all_cg.csv")  #### Union of 500 DMSs of paired cancers
 con <- file("/public/slst/home/ningwei/methylation/data/GDC-PANCAN.methylation450.tsv.gz", "r")
 line=readLines(con,n=1)
 j=1

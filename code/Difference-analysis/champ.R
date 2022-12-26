@@ -12,7 +12,7 @@ cancer_data<-cancer_data[-c(1,2)]
 cancer<-str_split_fixed(cancer_data,"/",9)[,9]
 
 for(i in cancer){
-    dir.create(paste0("/public/slst/home/ningwei/methylation/data/all_primary_data/",i)) 
+    dir.create(paste0("/public/slst/home/ningwei/methylation/data/all_primary_data/",i)) ### Methylation data for different cancers
 }
 
 args <- commandArgs(trailingOnly = TRUE)
@@ -56,7 +56,7 @@ for(i in number){
         group_list<-str_split_fixed(group_list,"-",2)[,2]
         myDMP <- champ.DMP(beta = myNorm,pheno=group_list)
         df_DMP <- myDMP[[1]]
-        df_DMP<-df_DMP[which(df_DMP[,1]>0.59|df_DMP[,1]<c(-0.59)),]
+        #df_DMP<-df_DMP[which(df_DMP[,1]>0.59|df_DMP[,1]<c(-0.59)),]
         df_DMP<-df_DMP[which(df_DMP[,5]<0.01),]
         for(h in 2:length(a1)){
             data3<-fread(paste0(cancer_data[i],"/",a1[h]),data.table=F)

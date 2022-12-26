@@ -32,70 +32,40 @@ from sklearn.model_selection import KFold
 from sklearn.model_selection import StratifiedShuffleSplit
 from tensorflow.keras.backend import clear_session
 from sklearn.metrics import f1_score, accuracy_score, confusion_matrix,precision_score, recall_score
+from sklearn.metrics import matthews_corrcoef,cohen_kappa_score
+
 ########################################################################### 构建划分函数
 
-def load_data(CSV_FILE_PATH):
-    IRIS = pd.read_csv(CSV_FILE_PATH)
-    target_var = 'project_id'  # 目标变量
-    # 数据集的特征
-    features = list(IRIS.columns)
-    features.remove(target_var)
-    # 目标变量的类别
-    Class = IRIS[target_var].unique()
-    # 目标变量的类别字典
-    Class_dict = dict(zip(Class, range(len(Class))))
-    # 增加一列target, 将目标变量进行编码
-    IRIS['target'] = IRIS[target_var].apply(lambda x: Class_dict[x])
-    # 对目标变量进行0-1编码(One-hot Encoding)
-    lb = LabelBinarizer()
-    lb.fit(list(Class_dict.values()))
-    transformed_labels = lb.transform(IRIS['target'])
-    y_bin_labels = []  # 对多分类进行0-1编码的变量
-    for i in range(transformed_labels.shape[1]):
-        y_bin_labels.append('y' + str(i))
-        IRIS['y' + str(i)] = transformed_labels[:, i]
-    # 将数据集分为训练集和测试集
-    train_x, test_x, train_y, test_y = train_test_split(IRIS[features], IRIS[y_bin_labels], stratify=IRIS['project_id'],\
-                                                        train_size=0.8, test_size=0.2, random_state=1)
-    return train_x, test_x, train_y, test_y
-
-#train_x, test_x, train_y, test_y = load_data("/public/slst/home/ningwei/methylation/process_data/train_data/data_smote.csv")
-data = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/train_data/train_data_smote_11_23.csv")
+data = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/train_data/train_data_smote_12_6.csv")
 Class = data['project_id'].unique()
 Class_dict = dict(zip(Class, range(len(Class))))
-# train_y = []
-# for i in range(len(data.iloc[:,0])):
-#     if data.iloc[i,0] in Class_dict.keys():
-#         train_y.append(Class_dict[data.iloc[i,0]])
-train_x = data.iloc[:,1:5078]
 data["target"] = data.iloc[:,0].apply(lambda x: Class_dict[x])
 # 对目标变量进行0-1编码(One-hot Encoding)
 lb = LabelBinarizer()
 lb.fit(list(Class_dict.values()))
 transformed_labels = lb.transform(data['target'])
 train_y = transformed_labels
+train_x = data.iloc[:,1:data.shape[1]-1]
 
-data = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/train_data/test_data_smote_11_23.csv")
-# test_y = []
-# for i in range(len(data.iloc[:,0])):
-#     if data.iloc[i,0] in Class_dict.keys():
-#         test_y.append(Class_dict[data.iloc[i,0]])
-test_x = data.iloc[:,1:5078]
+data = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/train_data/test_data_smote_12_6.csv")
 data["target"] = data.iloc[:,0].apply(lambda x: Class_dict[x])
 # 对目标变量进行0-1编码(One-hot Encoding)
 lb = LabelBinarizer()
 lb.fit(list(Class_dict.values()))
 transformed_labels = lb.transform(data['target'])
 test_y = transformed_labels
+test_x = data.iloc[:,1:data.shape[1]-1]
 
+n = sys.argv[1]
+n = int(n)
+print(n)
+RF_feature = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/feature_importance_12_6/RF_feature"+str(n)+".csv")
+# Extra_feature = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/feature_importance/Extratree_feature_11_23.csv")
+# xgboost_feature = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/feature_importance/Xgboost_feature_11_23.csv")
 
-RF_feature = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/feature_importance/RF_feature_11_23.csv")
-Extra_feature = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/feature_importance/Extratree_feature_11_23.csv")
-xgboost_feature = pd.read_csv("/public/slst/home/ningwei/methylation/process_data/feature_importance/Xgboost_feature_11_23.csv")
-
-m = sys.argv[1]
+m = sys.argv[2]
 m =int(m)
-
+print(m)
 ########################## RF 
 new_train_x = train_x[RF_feature.iloc[0:m,0]]
 new_test_x = test_x[RF_feature.iloc[0:m,0]]
@@ -118,7 +88,9 @@ if m ==10 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=100, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=90, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=80, activation='relu'))
     model.add(K.layers.Dense(units=70, activation='relu'))
     model.add(K.layers.Dense(units=60, activation='relu'))
@@ -131,7 +103,9 @@ if m ==15 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=130, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=110, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=90, activation='relu'))
     model.add(K.layers.Dense(units=70, activation='relu'))
     model.add(K.layers.Dense(units=50, activation='relu'))
@@ -143,7 +117,9 @@ if m ==20 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=180, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=152, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=124, activation='relu'))
     model.add(K.layers.Dense(units=96, activation='relu'))
     model.add(K.layers.Dense(units=68, activation='relu'))
@@ -156,7 +132,9 @@ if m ==25 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=250, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=210, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=170, activation='relu'))
     model.add(K.layers.Dense(units=130, activation='relu'))
     model.add(K.layers.Dense(units=90, activation='relu'))
@@ -169,7 +147,9 @@ if m ==30 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=230, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=192, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=154, activation='relu'))
     model.add(K.layers.Dense(units=116, activation='relu'))
     model.add(K.layers.Dense(units=78, activation='relu'))
@@ -182,7 +162,9 @@ if m ==35 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=330, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=274, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=218, activation='relu'))
     model.add(K.layers.Dense(units=162, activation='relu'))
     model.add(K.layers.Dense(units=106, activation='relu'))
@@ -195,7 +177,9 @@ if m ==40 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=310, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=245, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=180, activation='relu'))
     model.add(K.layers.Dense(units=115, activation='relu'))
     model.add(K.layers.Dense(units=50, activation='relu'))
@@ -207,7 +191,9 @@ if m ==45 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=400, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=284, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=167, activation='relu'))
     model.add(K.layers.Dense(units=50, activation='relu'))
     model.add(K.layers.Dense(units=26,  activation='softmax'))
@@ -218,7 +204,9 @@ if m == 50 :
     clear_session()
     model = K.models.Sequential()
     model.add(K.layers.Dense(units=310, input_dim=m,  activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=220, activation='relu'))
+    model.add(K.layers.Dropout(0.1))
     model.add(K.layers.Dense(units=130, activation='relu'))
     model.add(K.layers.Dense(units=40, activation='relu'))
     model.add(K.layers.Dense(units=26,  activation='softmax'))
@@ -238,7 +226,11 @@ accuracy = accuracy_score(y_really,R_predict)
 F1_score = f1_score(y_really,R_predict,average='weighted')
 recall = recall_score(y_really, R_predict, average='weighted')
 precision = precision_score(y_really, R_predict,average='weighted')
-f = open("/public/slst/home/ningwei/methylation/process_data/DNN_different_number/"+"DNN_RF"+str(m)+"_11_23.txt",'a') #若文件不存在，系统自动创建。'a'表示可连续写入到文件，保留原内容，在原内容之后写入。可修改该模式（'w+','w','wb'等）
+
+matthews = matthews_corrcoef(y_really, R_predict,  sample_weight=None)
+kappa = cohen_kappa_score(y_really, R_predict)
+
+f = open("/public/slst/home/ningwei/methylation/process_data/DNN_different_number_12_15/"+"DNN_RF_"+str(n)+"_"+str(m)+".txt",'a') #若文件不存在，系统自动创建。'a'表示可连续写入到文件，保留原内容，在原内容之后写入。可修改该模式（'w+','w','wb'等）
 f.write("test_acc: "+str(accuracy)) #将字符串写入文件中
 f.write("\n")   #换行 
 f.write("test_recall: "+str(recall)) #将字符串写入文件中
@@ -247,4 +239,7 @@ f.write("test_precision: "+str(precision)) #将字符串写入文件中
 f.write("\n")   #换行
 f.write("test_F1: "+str(F1_score)) #将字符串写入文件中
 f.write("\n")   #换行
+f.write("test_matthews: "+str(matthews)) #将字符串写入文件中
+f.write("\n")   #换行
+f.write("test_kappa: "+str(kappa)) #将字符串写入文件中
 f.close()

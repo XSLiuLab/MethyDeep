@@ -29,10 +29,11 @@ This repository provides the analysis reports, code and data for readers who are
   * [ML](./code/ML/) : Comparison of six machine learning methods
   * [DNN_Gridsearch](./code/DNN_Gridsearch/) : Neural network for super parameter selection
   * [DNN](./code/DNN/) : Training of Neural Network
-  * [metastasis_dataset](./code/metastasis_dataset) : Performance of neural network and machine learning in metastatic cancer dataset
-  * [model_comparsion](./code/model_comparsion/) : Performance of methydeep and other cancer models on primary cancer dataset
-* [data](./data) : [Xgboost_feature_11_23.csv](https://github.com/XSLiuLab/MethyDeep/blob/main/data/Xgboost_feature_11_23.csv) : Data features ; [targer_names.csv](https://github.com/XSLiuLab/MethyDeep/blob/main/data/targer_names.csv) : model lables
-* [methydeep](./code/methydeep/) :  Finalized model
+  * [validata_dataset](./code/validata_dataset) : Performance of MethyDeep in validata dataset
+  * [model_comparsion](./code/model_comparsion/) : Performance of MethyDeep and other  models on validata dataset
+  * [plot](./code/plot) : All drawing codes in this study
+* [data](./data) : [RF_feature45.csv](./data/RF_feature45.csv) : The features of MethyDeep ; [targer_names.csv](https://github.com/XSLiuLab/MethyDeep/blob/main/data/targer_names.csv) : model lables
+* [MethyDeep](./code/MethyDeep/) :  Finalized model
 
 ## Brief use
 
@@ -43,8 +44,8 @@ If you just want to use our model to predict, follow the following process
 from keras.models import load_model
 import pandas as pd
 import numpy as np
-new_model = load_model('./code/methydeep')
-feature = pd.read_csv("./data/XGboost_feature_11_23.csv")
+new_model = load_model('./MethyDeep')
+feature = pd.read_csv("./data/RF_feature45.csv")
 target_names = pd.read_csv("./data/targer_names.csv")
 ### load data
 data = pd.read_csv("./yourdata")
