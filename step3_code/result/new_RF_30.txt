@@ -1,8 +1,0 @@
-test_acc: 0.9375
-test_recall: 0.9375
-test_precision: 0.9390004726017901
-test_F1: 0.9375
-vali_acc: 0.8235051546391753
-vali_recall: 0.8235051546391753
-vali_precision: 0.8880149998780104
-vali_F1: 0.8235051546391753
