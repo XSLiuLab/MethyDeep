@@ -67,6 +67,7 @@ predict2 ### predict result
 We thank ShanghaiTech University High Performance Computing Public Service Platform for computing services.This work was supported by Shanghai Science and Technology Commission (21ZR1442400), the National Natural Science Foundation of China (31771373), and startup funding from ShanghaiTech University.
 
 ## License
+Ning W, Wu T, Wu C, Wang S, Tao Z, Wang G, Zhao X, Diao K, Wang J, Chen J, Chen F, Liu XS. Accurate prediction of pan-cancer types using machine learning with minimal number of DNA methylation sites. J Mol Cell Biol. 2023 Apr 10:mjad023. doi: 10.1093/jmcb/mjad023. Epub ahead of print. PMID: 37037781.
 
 ***
 
